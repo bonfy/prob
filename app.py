@@ -1,9 +1,9 @@
-from flask import Flask
-app = Flask(__name__)
+# -*- coding:utf-8 -*-
 
-@app.route('/')
-def hello_world():
-    return 'Hello World!'
+from application import create_app
 
-if __name__ == '__main__':
-    app.run()
+import os
+filename = os.path.join(os.getcwd(), 'local_config.py')
+app = create_app(filename)
+
+app.run(host='0.0.0.0')
