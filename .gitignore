@@ -4,5 +4,6 @@ venv
 *.db
 coverage
 
+
 migrations/
 __pycache__
