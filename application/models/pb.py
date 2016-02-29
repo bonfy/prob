@@ -48,6 +48,10 @@ class PB(Base):
     def __str__(self):
         return self.PBC
 
+    def keys(self):
+        return (
+            'id', 'PBC', 'PBD', 'PBE',
+        )
 
 class CA(Base):
 
