@@ -1,7 +1,7 @@
 {
   "name": "prob",
   "version": "1.0.0",
-  "description": "```cmd\r CREATE DATABASE prob DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;\r ```",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

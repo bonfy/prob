@@ -1,10 +1,18 @@
-module.exports = {
-  context: __dirname + "/frontapp",
-  entry: "./app.js",
+var webpack = require('webpack');
+var path = require('path');
 
+var PATHS = {
+  app: path.join(__dirname, 'frontapp'),
+  build: path.join(__dirname, 'frontdist'),
+  entry: path.resolve(__dirname, 'frontapp/app.js')
+};
+
+
+config = {
+  entry: PATHS.entry,
   output: {
     filename: "app.js",
-    path: __dirname + "/frontdist",
+    path: PATHS.build,
   },
   resolve: {
     extensions: ['', '.js', '.jsx']
@@ -23,3 +31,5 @@ module.exports = {
     ],
   },
 }
+
+module.exports = config;
