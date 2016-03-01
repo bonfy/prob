@@ -32,13 +32,13 @@ class PB(Base):
     PCD = Column(NCHAR(1))
     PS_KZ = Column(NCHAR(1))
     PB_EXT = Column(NVARCHAR(100))
-    BEKANT_D = Column(DateTime, default=datetime.datetime.now)
+    BEKANT_D = Column(DateTime, default=datetime.datetime.utcnow())
     END_D = Column(DateTime)
     MOP1 = Column(Integer)
     MOP2 = Column(Integer)
     PLV = Column(NVARCHAR(100))
     USERNAME = Column(NVARCHAR(30))
-    INS_D = Column(DateTime, default=datetime.datetime.now)
+    INS_D = Column(DateTime, default=datetime.datetime.utcnow())
     UPD_D = Column(DateTime)
     TAXI = Column(NCHAR(1))
 
@@ -67,8 +67,8 @@ class CA(Base):
     PBZST_ID = Column(Integer)
     PBZST_P = Column(Numeric(5,1))
     PBZST_B = Column(TEXT)
-    BEKANT_D = Column(DateTime, default=datetime.datetime.now)
-    INS_D = Column(DateTime, default=datetime.datetime.now)
+    BEKANT_D = Column(DateTime, default=datetime.datetime.utcnow())
+    INS_D = Column(DateTime, default=datetime.datetime.utcnow())
     UPD_D = Column(DateTime)
 
     def __repr__(self):

@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 
 from contextlib import contextmanager
-
+from flask import current_app, abort
 from flask_sqlalchemy import SQLAlchemy as _SQLAlchemy
 
 

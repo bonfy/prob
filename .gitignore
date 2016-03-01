@@ -7,4 +7,5 @@ coverage
 
 
 migrations/
+node_modules/
 __pycache__
