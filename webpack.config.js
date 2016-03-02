@@ -1,3 +1,4 @@
+
 var webpack = require('webpack');
 var path = require('path');
 
@@ -9,11 +10,17 @@ var PATHS = {
 
 
 config = {
-  entry: PATHS.entry,
+  entry: [
+    'webpack/hot/dev-server',
+    'webpack-dev-server/client?http://localhost:8080',
+    PATHS.entry,
+  ],
   output: {
-    filename: "app.js",
+    filename: "bundle.js",
     path: PATHS.build,
+    // publicPath: 'http://localhost:8080/frontdist/',
   },
+  //devtool: 'source-map',
   resolve: {
     extensions: ['', '.js', '.jsx']
   },
@@ -30,6 +37,7 @@ config = {
       }
     ],
   },
+
 }
 
 module.exports = config;
