@@ -7,5 +7,6 @@ coverage
 
 
 migrations/
+frontdist/
 node_modules/
 __pycache__
