@@ -22,7 +22,7 @@ def headers_hook(response):
         response.headers['X-Rate-Expires'] = str(expires)
 
     # javascript can request API
-    if request.method == 'GET':
+    if request.method in ['GET','POST']: # == 'GET': # 
         response.headers['Access-Control-Allow-Origin'] = '*'
 
     # api not available in iframe

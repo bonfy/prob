@@ -5,7 +5,7 @@ var path = require('path');
 var PATHS = {
   app: path.join(__dirname, 'frontapp'),
   build: path.join(__dirname, 'frontdist'),
-  entry: path.resolve(__dirname, 'frontapp/app.js')
+  entry: path.resolve(__dirname, 'frontapp/tst_app.js')
 };
 
 

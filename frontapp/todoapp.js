@@ -1,4 +1,5 @@
 var React = require('react');
+import { Link } from 'react-router'
 
 var TodoList = React.createClass({
   render: function() {
@@ -25,6 +26,15 @@ var TodoApp = React.createClass({
     return (
       <div>
         <h3>TODO</h3>
+        
+         <ul role="nav">
+          <li><Link to="/about">About</Link></li>
+          <li><Link to="/users">Repos</Link></li>
+        </ul>
+
+        {/* add this */}
+        {this.props.children}
+
         <TodoList items={this.state.items} />
         <form onSubmit={this.handleSubmit}>
           <input onChange={this.onChange} value={this.state.text} />

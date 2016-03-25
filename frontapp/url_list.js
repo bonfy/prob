@@ -5,11 +5,11 @@ var url_list = {
 		, url  : base_url + 'prob'
 	},
 	'causes' : {
-		 name : 'causes'
+		  name : 'causes'
 		, url  : base_url + 'causes'
 	},
 	'measures' : {
-		 name : 'measures'
+		  name : 'measures'
 		, url  : base_url + 'measures'
 	}
 }
